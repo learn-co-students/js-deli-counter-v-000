@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite tests="3" errors="0" failures="0" time="0.002" timestamp="2016-02-13T19:11:48">
+		<testcase classname="takeANumber" name="adds a person to the line" time="0.001">
+		</testcase>
+		<testcase classname="takeANumber" name="appends the person the end of the line if there are already people on it" time="0">
+		</testcase>
+		<testcase classname="takeANumber" name="properly handles multiple people being added" time="0.001">
+		</testcase>
+	</testsuite>
+</testsuites>
+

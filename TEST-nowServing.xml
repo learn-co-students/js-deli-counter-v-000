@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite tests="2" errors="0" failures="0" time="0.001" timestamp="2016-02-13T19:11:48">
+		<testcase classname="nowServing" name="says the line is empty when no on is on line" time="0">
+		</testcase>
+		<testcase classname="nowServing" name="Announces the person it is serving, and reduces the line" time="0">
+		</testcase>
+	</testsuite>
+</testsuites>
+
