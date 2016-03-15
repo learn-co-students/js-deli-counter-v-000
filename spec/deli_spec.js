@@ -1,4 +1,25 @@
 'use strict';
+var jasmine = require('jasmine-node');
+var jsdom = require('jsdom');
+var path = require('path');
+describe("Jasmine Walkthrough", function(){
+var line, nowServing, takeANumber;
+beforeEach(function(done) {
+ var codeJs = path.resolve(__dirname, '../lib/', 'deli.js');
+ jsdom.env({
+   html: '<div></div>',
+   scripts: [codeJs],
+   onload: function(window) {
+      line = window.line;
+      nowServing = window.nowServing;
+      takeANumber = window.takeANumber;
+      done();
+   }
+ });
+});
+
+
+
 
 describe('line', function() {
 
@@ -68,4 +89,4 @@ describe('takeANumber', function() {
     expect(katzDeli).toEqual(["Ada", "Grace", "Kent"]);
   });
 });
-
+});
