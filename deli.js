@@ -2,9 +2,6 @@
 
 var katzDeli = [];
 
-function line(katzDeli){
-
-};
 
 function takeANumber(katzDeli, name){
 	katzDeli.push(name);
@@ -19,11 +16,11 @@ function nowServing(katzDeli, index){
 	};
 };
 
-function currentLine(katzDeli){
+function line(katzDeli){
 	if (katzDeli.length === 0){
 		return "The line is currently empty.";
 	}else{
-		console.log('The linke is currently: ');
+		console.log('The line is currently: ');
 		katzDeli.forEach(function(name, index){
 			var number = index + 1;
 			console.log(number + '. ' + name);
