@@ -1,0 +1,6 @@
+# A list of javascript files required for the project, in dependency order
+javascripts:
+  files:
+    - deli.js
+  specs:
+    - test/deli_test.js
