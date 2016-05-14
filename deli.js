@@ -5,14 +5,14 @@ var katzDeli = [];
 
 function takeANumber(katzDeli, name){
 	katzDeli.push(name);
-	return katzDeli.length;
+	return 'Welcome, ' + name + '. You are number ' + katzDeli.length + ' in line.';
 };
 
 function nowServing(katzDeli, index){
 	if (katzDeli.length === 0){
-		return "The line is currently empty.";
+		return 'There is nobody waiting to be served!';
 	} else {
-		return katzDeli.splice(0,1);
+		return 'Currently serving ' + katzDeli.splice(0,1)[0] + '.';
 	};
 };
 
@@ -20,10 +20,12 @@ function line(katzDeli){
 	if (katzDeli.length === 0){
 		return "The line is currently empty.";
 	}else{
-		console.log('The line is currently: ');
+		var list = '';
 		katzDeli.forEach(function(name, index){
 			var number = index + 1;
-			console.log(number + '. ' + name);
+			list += (" " + number + '. ' + name + ",");
 		});
+		list = list.slice(0, -1);
+		return 'The line is currently:' + list;
 	};
 };
