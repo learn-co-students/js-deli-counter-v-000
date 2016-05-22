@@ -1,3 +1,5 @@
+'use strict';
+
 function takeANumber(katzDeliLine, name){
 
     katzDeliLine.push(name);
@@ -39,4 +41,4 @@ function currentLine(katzDeliLine){
 
 }
 
-currentLine(["Bill", "Jane", "Ann"])
+currentLine(["Bill", "Jane", "Ann"]
