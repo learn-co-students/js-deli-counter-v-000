@@ -19,7 +19,7 @@ function currentLine(katzDeliLine) {
   } else {
     var phrase = "The line is currently: "
     katzDeliLine.forEach(function(name, index) {
-       phrase += (index + 1) + '. ' + name + ', ';
+       phrase += (index + 1) + ". " + name + ', ';
     });
     return phrase.slice(0,-2)
   }
