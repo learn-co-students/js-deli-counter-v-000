@@ -16,6 +16,6 @@ function currentLine(katzDeliLine){
     return "The line is currently empty.";
   }
     katzDeliLine.forEach(function(person,index){
-      return `The line is currently: ${index+1}. person `
+      return `The line is currently: ${index+1}. ${person} `
     });
 }
