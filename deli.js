@@ -24,20 +24,11 @@ function nowServing(deliLine) {
       return announcement;
     }
 }
-// var katzDeli =[]
-// function takeANumber(katzDeliLine, person) {
-//   katzDeliLine.forEach(function(personInLine, num) {
-//     katzDeli.push(person, num);
-//   }
-// }
-// function takeANumber(deliLine, person) {
-//   for(i=0; i < deliLine.length; i++){
-//     //  adds a person to the line
-//      deliLine.push(person);
-//   }
-// }
-
-  // deliLine.forEach(function(person, number) {
-  //       newLine.push(" "+`${number+1}`+". "  + person);
-  // });
-  // return intro + newLine.toString();
+// appends the person the end of the line if there are already people on it
+function takeANumber(katzDeli, person) {
+     katzDeli.push(person);
+     katzDeli.forEach(function(personInLine, num) {
+       bill= "Welcome, "+ personInLine +". You are number " +`${num+1} `+"in line."
+     });
+return bill;
+}
