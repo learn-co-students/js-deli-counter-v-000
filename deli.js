@@ -1,3 +1,5 @@
+//js deli counter
+
 var katzDeliLine = [];
 
 function takeANumber(katzDeliLine, name) {
