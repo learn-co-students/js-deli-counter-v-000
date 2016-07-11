@@ -19,10 +19,11 @@ function currentLine(katzDeliLine) {
     katzDeliLine.forEach(function(name, index) {
       var pos = index + 1;
 
-      index == 0 ? currentDeliLine.push("The line is currently: "+pos+". "+name) : currentDeliLine.push(" "+pos+". "+name);
+      currentDeliLine.push(pos+". "+name);
       
-      return currentDeliLine.toString();
-    })
+    });
+    return "The line is currently: "+currentDeliLine.join(", ");
+
   } else {
     return "The line is currently empty.";
   }
