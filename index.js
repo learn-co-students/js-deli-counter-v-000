@@ -15,15 +15,14 @@ function nowServing(line) {
 
 function currentLine(line) {
   if (line.length > 0) {
-    var lineString = "The line is currently:"
+    var customersArray = [];
+
     line.forEach(function(customer, position) {
-      if (position === (line.length - 1)) {
-        lineString = lineString + " " + (position + 1) + ". " + customer;
-      } else {
-        lineString = lineString + " " + (position + 1) + ". " + customer + ',';
-      }
-    })
-    return lineString;
+      position += 1;
+      customersArray.push(position + ". " + customer);
+    });
+
+    return "The line is currently: " + customersArray.join(", ");
   } else {
     return "The line is currently empty.";
   }
