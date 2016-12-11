@@ -16,9 +16,19 @@ function nowServing(katzDeliLine) {
   }
 }
 
-nowServing(katzDeliLine);
+var people = [];
 
 function currentLine(katzDeliLine) {
-
+  if (katzDeliLine.length === 0) {
+    return "The line is currently empty.";
+  }
+  else {
+    katzDeliLine.forEach(function (person, index) {
+      people.push(`${index + 1}. ${person}`)
+    });
+    var current = people.join(', ');
+    return `The line is currently: ${current}`;
+  };
 }
+
 
