@@ -4,19 +4,33 @@ function takeANumber(line, name){
 }
 
 function nowServing(line){
-  if (!line.length){
-    return "There is nobody waiting to be served!"
+  if(!line.length){
+    return "There is nobody waiting to be served!";
+  }else{
+    return `Currently serving ${line.shift()}.`;
   }
-  return `Currently serving ${line.shift()}.`
-};
+}
 
 function currentLine(line){
-  if (!line.length){
-    return "The line is currently empty."
+  if(!line.length){
+    return "The line is currently empty.";
+  }else{
+    var numNames = [];
+    for(var i = 0; i < line.length; i++){
+      numNames.push(`${i+1}. ${line[i]}`)
+    }
+    return `The line is currently: ${numNames.join(', ')}`;
   }
-  const numbersNames = []
-  for (let i = 0, l = line.length; i < l; i++){
-    numbersNames.push(`${i + 1}. ${line[i]}`)
+}
+
+function currentLine(line){
+  if(!line.length){
+    return "The line is currently empty.";
+  }else{
+    var numNames = [];
+    for(var i=0; i<line.length; i++){
+      numNames.push(`${i+1}. ${line[i]}`)
+    }
+    return `The line is currently: ${numNames.join(', ')}`;
   }
-  return `The line is currently: ${numbersNames.join(', ')}`
-};
+}
