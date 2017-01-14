@@ -8,8 +8,7 @@ function nowServing(line){
   if (line.length === 0) {
     return "There is nobody waiting to be served!";
   } else {
-    var nextUp = line.splice(0,1);
-    return `Currently serving ${nextUp}.`;
+    return `Currently serving ${line.shift()}.`;
   }
 }
 
