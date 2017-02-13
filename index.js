@@ -2,16 +2,38 @@
 
 var katzDeli=[]
 function takeANumber(katzDeliLine, name){
-  place = katzDeliLine.length
+  var place = katzDeliLine.length
   katzDeliLine.push(name)
-  linePlace = place + 1
+  var linePlace = place + 1
 
   return "Welcome, " + name +". You are number " + linePlace + " in line."
 }
 
-//Build a function that a new customer will use when entering the deli.
-//The function, takeANumber, should accept
-//   the current line of people, katzDeliLine, along with the new person's name as parameters.
-//   The function should return their position in line.
-//      And don't go being too programmer-y and give them their index.
-//      These are normal people. If they are 7th in ok==line, tell them that. Don't get their hopes up by telling them they are number 6 in line.
+function nowServing(katzDeliLine) {
+if (katzDeliLine.length == 0) {
+    return "There is nobody waiting to be served!"
+
+  } else {
+    return `Currently serving ${katzDeliLine.shift()}.`
+  }
+
+}
+
+function currentLine(line) {
+if (line.length == 0) {
+  return "The line is currently empty."
+} else {
+    var names = [];
+    line.forEach(function(name, index){
+      var number = index + 1;
+      names.push(number + ". " + name)
+
+    })
+
+  return `The line is currently: ${names.join(", ")}`;
+}
+}
+
+//create empty array
+//push both name and index into empty array
+//return eveything in array sequentially into the line that starts with "the line is currently"
