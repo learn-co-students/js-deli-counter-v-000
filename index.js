@@ -10,8 +10,7 @@ function nowServing(line) {
   if (line.length === 0) {
   return  "There is nobody waiting to be served!";
   } else {
-  line = line.splice(0,1);
-  return "Currently serving " + line[0]+".";
+  return "Currently serving " + line.splice(0,1) + ".";
   }
 }
 
@@ -19,10 +18,10 @@ function currentLine(line) {
   if (line.length === 0) {
   return "The line is currently empty.";
   } else {
-  var newLine = []
+  var newLine = [];
   line.forEach(function(customer, index) {
-  var number = index + 1;
-  newLine.push(" "+ number + ". " + customer);
+  var position = index + 1;
+  newLine.push(" "+ position + ". " + customer);
   });
   return "The line is currently:" + newLine;
   }
