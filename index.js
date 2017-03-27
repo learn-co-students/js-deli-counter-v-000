@@ -18,14 +18,10 @@ function nowServing(array) {
 function currentLine(array) {
   if (array.length > 0) {
     var sentence = "The line is currently:";
-    var counter = 1;
     for (var i = 0; i < array.length; i++) {
-      sentence = `${sentence} ${counter}. ${array[i]},`;
-      counter++;
+      sentence = `${sentence} ${i + 1}. ${array[i]},`;
     }
-   var array = sentence.split("");
-   array.pop()
-   return array.join("")
+  return sentence.slice(0, sentence.length - 1);
   }
   else {
     return "The line is currently empty."
