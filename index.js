@@ -1,18 +1,19 @@
 var katzDeliLine = [];
 var newPersonsName = "";
+
 function takeANumber(katzDeliLine, newPersonsName){
   katzDeliLine.push(newPersonsName);
-  var position = "";
+  var position = "Welcome, " + newPersonsName + "." + " You are number " + (katzDeliLine.indexOf(newPersonsName) + 1)  + " in line.";
   var i = 0;
   while(i < katzDeliLine){
     newPersonsName;
     i++;
 }
-  return position = "Welcome, " + newPersonsName + "." + " You are number " + (katzDeliLine.indexOf(newPersonsName) + 1)  + " in line."
+  return position
 }
 
 function nowServing(katzDeliLine){
-  if (katzDeliLine == 0) {
+  if (katzDeliLine.length == 0) {
      return "There is nobody waiting to be served!"
 
   } else {
@@ -21,9 +22,14 @@ function nowServing(katzDeliLine){
 }
 
 function currentLine(katzDeliLine){
-   if (katzDeliLine == 0){
-      return "The line is currently empty."
-   } else {
-     return "The line is currently: " + "1. " + katzDeliLine[0] + "," + " 2. " + katzDeliLine[1] + "," + " 3. " + katzDeliLine[2];
-   }
+  var index;
+  var i;
+  var text = "";
+    if (katzDeliLine.length == 0){
+       return "The line is currently empty."
+    }
+    for(i = 1, index = 0; index < katzDeliLine.length; index++, i++){
+          text +=  i + ". " + katzDeliLine[index] + (", ");
+    }
+        return "The line is currently: " + text.replace(/,\s*$/, "");
 }
