@@ -14,7 +14,7 @@ function nowServing(line) {
 }
 
 function currentLine(line) {
-  if (!!line[0] === true) {
+  if (line) {
     var current_line = "The line is currently: "
     for (var i = 0 ; i < line.length -1 ; i++) {
       current_line += `${i + 1}. ${line[i]}, `
