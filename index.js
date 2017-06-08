@@ -14,19 +14,16 @@ function nowServing(array) {
   }
 }
 
-function currentLine(array) {
-  // your code here
-    if(array.length == 0){
-      return "The line is currently empty.";
-    }
-
-    else{
-       var queue = [];
-      array.forEach(function(person, place){
-       queue.push((place + 1).toString() + ". " + person );
-      });
-      return "The line is currently: " + queue.join(", ");
-
-   // "The line is currently: 1. Steven, 2. Blake, 3. Avi"
+function currentLine(line) {
+  if (!line.length) {
+    return "The line is currently empty."
   }
-}
+
+  const numbersAndNames = []
+
+  for (let i = 0, l = line.length; i < l; i++) {
+    numbersAndNames.push(`${i + 1}. ${line[i]}`)
+  }
+
+  return `The line is currently: ${numbersAndNames.join(', ')}`
+};
