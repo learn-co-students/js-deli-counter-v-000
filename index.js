@@ -4,25 +4,19 @@ function takeANumber(katzDeliLine, name) {
 }
 
 function nowServing(line) {
-  if (line.length === 0) {
+  if (!line.length) {
     return "There is nobody waiting to be served!"
-  } else {
-    return `Currently serving ${line.shift()}.`
   }
+  return `Currently serving ${line.shift()}.`
 }
 
 function currentLine(line) {
-  if (line.length === 0) {
+  if (!line.length) {
     return "The line is currently empty."
-  } else {
-    var currentLine = "The line is currently:"
-    for (let i = 0; i < line.length; i++) {
-      if (i === line.length - 1) {
-        currentLine = currentLine + ` ${i + 1}. ${line[i]}`
-      } else {
-        currentLine = currentLine + ` ${i + 1}. ${line[i]},`
-      }
-    }
-    return currentLine
   }
+  const numberedLine = []
+  for (let i = 0; i < line.length; i++) {
+    numberedLine.push(`${i + 1}. ${line[i]}`)
+  }
+  return `The line is currently: ${numberedLine.join(', ')}`
 }
